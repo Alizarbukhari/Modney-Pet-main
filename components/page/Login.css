@@ -1,0 +1,11 @@
+.user-input:focus-visible {
+    --tw-ring-offset-width: 0px;
+    color:white;
+    border-color:rgba(255, 255, 255, 0.398);
+
+}
+
+.user-input {
+    transition: border-color 0.5s ease;
+    color:white;
+}

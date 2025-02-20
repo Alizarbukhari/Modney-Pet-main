@@ -1,0 +1,46 @@
+/* styles/globals.css or a specific CSS file */
+.line-bullet {
+    display: inline-block;
+    width: 30px; /* Length of the line */
+    height: 4px; /* Thickness of the line */
+    background-color: gray; /* Default color */
+    transition: background-color 0.3s ease;
+}
+
+.line-bullet.active {
+    background-color: blue; /* Active color */
+}
+
+
+
+
+.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal {
+    color: white !important; 
+}
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    font-size: 18px; /* Adjust size if needed */
+}
+
+.custom-pagination {
+    color: white;
+    font-weight: bold;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    margin: 0px 10px !important;
+    height: 0px !important;
+    width: 0px !important;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    margin-right: 100px !important;
+    font-size: 20px !important;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    margin-left: 100px !important;
+    font-size: 20px !important;
+}

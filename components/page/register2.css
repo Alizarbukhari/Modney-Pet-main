@@ -1,0 +1,25 @@
+.input-with-unit {
+    position: relative;
+  }
+  
+  .input-with-unit input {
+    width: 100%;
+    padding-right: 2.5rem; /* Adjust padding to make space for the unit */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input-with-unit .unit {
+    position: absolute;
+    right: 1rem; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.875rem; /* Adjust font size as needed */
+    color: #666; /* Adjust color as needed */
+    pointer-events: none; /* Prevent interaction with the unit */
+  }
+
+/* change input placeholder text size */
+input::placeholder {
+    font-size: 0.875rem; /* Adjust font size as needed */
+}
