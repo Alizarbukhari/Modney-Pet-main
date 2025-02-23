@@ -8,13 +8,18 @@ function Main() {
 
   return (
       // main div
-    <div >
+    <div className='bg-[#FFFCF3]' >
       {/* header */}
     <div><MainPic/></div>
-    <Body/>
+    <div className="mb-5 bg-[#FFFCF3]">
 
+    <Body/>
+</div>
        {/* Footer */}
-       <Footer2/>
+ 
+
+    <Footer2/>
+
     
     </div>
 
