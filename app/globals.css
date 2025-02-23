@@ -10,6 +10,16 @@ font-noto {
   font-family: "Noto Sans KR";
 }
 
+
+
+@font-face {
+  font-family: 'built-titling';
+  src: url('/built-titling/built titling bd.ttf') format('truetype');
+}
+.built-titling-font {
+  font-family: 'built-titling', Arial, sans-serif;
+}
+
 @layer base {
   :root {
     --radius: 0.5rem;
