@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Body1() {
   return (
-    <div className='w-[95%] md:h-[1284px] h-auto border-b border-t md:border-[2px] border-[#A5A5A5] bg-[#FFFCF3]'>
+    <div className='w-[95%] md:h-[1284px] h-auto border-t-2  md:border-x-2 border-[#A5A5A5] bg-[#FFFCF3]'>
         {/* button div */}
         <div><Button title="하우스 오너"/></div>
         {/* content div */}

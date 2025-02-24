@@ -28,6 +28,7 @@ import Register from '@/components/register'
 import Login from '@/components/page/Login'
 import IpJu from '@/components/page/IpJu'
 import MainPost from '@/components/mainPost'
+import Dogshome from '@/components/dogsHome'
 
 function page() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -60,6 +61,7 @@ function page() {
         </>
       )
       }
+    <Dogshome/>
       <Footer2></Footer2>
     </>
   )
