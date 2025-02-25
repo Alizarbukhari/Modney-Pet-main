@@ -22,7 +22,7 @@ font-noto {
 
 @font-face {
   font-family: 'Noto Sans KR';
-  src: url('/Noto_Sans_KR/NotoSansKR-VariableFont_wght.ttf') format('truetype');
+  src: url('/font-noto-sans/NotoSansKR-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
 }
@@ -31,11 +31,12 @@ font-noto {
   font-family: 'Noto Sans KR', sans-serif;
 }
 @font-face {
-  font-family: 'Noto Sans KR'; 
-  src: url('/Noto_Sans_KR/static/NotoSansKR-Bold.ttf') format('truetype');
-  font-weight: 700; 
+  font-family: 'Noto Sans KR';
+  src: url('/font-noto-sans/static/NotoSansKR-Bold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
 }
+
 
 .noto-sans-kr-bold {
   font-family: 'Noto Sans KR', sans-serif; 
