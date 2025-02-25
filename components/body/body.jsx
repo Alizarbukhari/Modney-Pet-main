@@ -48,7 +48,7 @@ export default function Body() {
                   <p>진심으로 감사합니다.</p>
                   <p className='mt-6'>모드니펫은  반려동물 이동가방에서 나아가 </p>
                   <p className='noto-sans-kr-bold  '>반려동물 주거환경 개선을 통해</p>
-                  <p className='noto-sans-kr-bold '>보호자와 반려동물의 공존을 노력하는 브랜드입니다.</p>
+                  <p className='noto-sans-kr-bold text-[15px] '>보호자와 반려동물의 공존을 노력하는 브랜드입니다.</p>
                 </div>
               </div>
             </div>

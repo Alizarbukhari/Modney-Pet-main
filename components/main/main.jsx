@@ -6,8 +6,8 @@ export default function MainPic() {
     <div>
       <div className="bg-[url('/main/wdog.png')] md:bg-[url('/main/HouseMain.png')] w-[100%] h-[700px] relative bg-cover  ">
         
-        <div className='md:-mt-8  flex justify-center w-full  built-titling-font '>
-          <h1 className='text-[83px] md:text-[165px]'>
+        <div className=' leading-none pt-8 pl-4 md:pl-7 built-titling-font '>
+          <h1 className='text-[83px] md:text-[200px]'>
           HOUSE OF MODNEYPET
           </h1>
         </div>
