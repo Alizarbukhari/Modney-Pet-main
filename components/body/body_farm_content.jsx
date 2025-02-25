@@ -34,7 +34,7 @@ export default function Body_Form_Content() {
                         className='w-full md:h-[50px] md:placeholder:text-[16px] placeholder:text-[11px] border-[2px] px-6 border-[#D7D7D7]' />
                 </div>
                 {/* 4th input */}
-                <div className='flex flex-col gap-[20px]'>
+                <div className='flex flex-col  gap-[20px]'>
                     <div className='text-[23px] noto-sans-kr'>강아지 사진 4</div>
                     <label    
                      htmlFor="file-upload" 

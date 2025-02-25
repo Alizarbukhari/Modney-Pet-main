@@ -36,7 +36,7 @@ export default function Body() {
                 {/* title */}
                 <div className="flex   flex-wrap gap-2 justify-center items-center ">
                   {vectorImages.map((src, index) => (
-                    <div key={index} className="md:w-[55px] w-[20px] h-[32px] md:h-[55px]">
+                    <div key={index} className="md:w-[55px] w-[32px] h-[32px] md:h-[55px]">
                       <Image src={src} alt={`Vector ${index + 1}`} width={55} height={55} className='h-full w-full' />
                     </div>
                   ))}

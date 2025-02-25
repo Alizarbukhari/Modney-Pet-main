@@ -12,7 +12,7 @@ export default function Body1() {
         <div className='w-full h-full flex justify-center items-center'>
             {/* main div */}
           <div className='w-[90%] h-[967px] flex flex-col justify-center   items-center'>
-          <div className='md:text-[42px] text-[30px] text-center noto-sans-kr'>하우스 오너가 <br className='md:hidden' /> 되신 것을 축하드립니다!</div>
+          <div className='md:text-[42px] text-[30px] text-center noto-sans-kr-bold'>하우스 오너가 <br className='md:hidden' /> 되신 것을 축하드립니다!</div>
           <div className='md:w-[997px] w-[350px ]   h-[219px] md:h-[562px] md:mt-8'>
             <Image
             src="/bodyImages/body1.png"
