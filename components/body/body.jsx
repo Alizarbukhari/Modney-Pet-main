@@ -55,10 +55,10 @@ export default function Body() {
           </div>
         </div>
         {/* div 2 */}
-        <Body1 />
+        {/* <Body1 />
         <Body2 />
         <Body3 />
-        <Body_Form />
+        <Body_Form /> */}
 
 
 

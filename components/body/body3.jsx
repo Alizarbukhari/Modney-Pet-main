@@ -6,7 +6,7 @@ import Body2_Content from './body2_content'
 export default function Body3() {
  
   return (
-    <div className='md:w-[95%] w-full md:h-[745px] h-auto  md:border-[2px] border-t md:border-t-0 border-[#A5A5A5] bg-[#FFFCF3]'>
+    <div className='md:w-[95%] w-full md:h-[745px] h-auto   md:border-[2px] border-t md:border-t-0 border-[#A5A5A5] bg-[#FFFCF3]'>
         {/* button div */}
         <div><Button title="하우스 오너"/></div>
         {/* content div */}

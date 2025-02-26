@@ -46,7 +46,7 @@ export default function Body2() {
     
   }]
   return (
-    <div className='md:w-[95%] w-[100%] md:h-[1127px] h-auto  border-t md:border-[2px] border-[#A5A5A5] bg-[#FFFCF3]'>
+    <div className='md:w-[95%] w-[100%] md:h-[1127px] Md:max-h-[100%]  border-t md:border-[2px] border-[#A5A5A5] bg-[#FFFCF3]'>
         {/* button div */}
         <div><Button title="하우스 오너"/></div>
         {/* content div */}
