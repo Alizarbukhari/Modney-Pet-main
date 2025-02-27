@@ -15,18 +15,15 @@ function Main() {
     <div className='bg-[#FFFCF3]' >
       {/* header */}
     <div><MainPic/></div>
-    <div>
+    <div className='mb-5'>
 
     <Body/>
-    <Body1/>
-    <Body2/>
-    <Body3/>
-    <Body_Form/>
+    
 </div>
        {/* Footer */}
  
 
-    <Footer2/>
+     <Footer2/> 
 
     
     </div>

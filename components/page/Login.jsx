@@ -65,7 +65,7 @@ function Login({ setIsValid }) {
 
   return (
     <>
-<div className="h-[100vh] w-[100%] bg-cover bg-center bg-[url('/bg-login.jpg')] relative">
+<div className="md:h-[120vh] h-[80vh] w-[100%] bg-cover bg-center bg-[url('/bg-login.jpg')] relative">
   <div className='absolute top-[100px] left-0 right-0 flex justify-center items-center flex-col '>
           <div className="flex w-[257.9999694824219px]  md:w-[414.9999694824219px] h-[107.99999237060547px] md:h-[197.99998474121094px] items-center justify-center ">
           <h1 className="built-titling-font text-[58px] md:text-[90px] text-center text-white m-0 leading-none">

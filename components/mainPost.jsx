@@ -90,7 +90,7 @@ export default function MainPost() {
 
   return (
     <div className="container mx-auto p-4 max-w-4xl">
-      <h1 className="text-2xl font-bold text-center mb-8">입주건 커뮤니티 개시판</h1>
+      <h1 className="text-2xl font-bold text-center py-20">입주건 커뮤니티 개시판</h1>
 
       {/* Navigation */}
       <div
@@ -99,23 +99,21 @@ export default function MainPost() {
         {...bind()}
         style={{ touchAction: "pan-x" }}
       >
-        <div className="flex gap-6 border-b whitespace-nowrap pb-2">
+        <div className="border-b-2 border-black px-10">
+        <div className="flex gap-3  whitespace-nowrap pb-6 ">
           {["전체", "공지사항", "자주묻는질문", "1:1 문의", "맴버십혜택"].map((tab) => (
             <Button
               key={tab}
               variant="link"
-              className={activeTab === tab ? "text-primary" : "text-muted-foreground"}
+              className={activeTab === tab ? "text-primary" : "text-muted-foreground noto-sans-kr "}
               onClick={() => setActiveTab(tab)}
               data-active={activeTab === tab}
             >
               {tab}
             </Button>
           ))}
-        </div>
-      </div>
-
-      {/* Search Bar */}
-      <div className="flex justify-end mb-6">
+         {/* Search Bar */}
+      <div className="hidden md:flex justify-end ">
         <div className="flex w-full sm:w-72">
           <Input
             type="search"
@@ -132,11 +130,16 @@ export default function MainPost() {
           </Button>
         </div>
       </div>
+        </div></div>
+        
+      </div>
 
+     
+<div className="w-full border-b-2 border-black "> 
       {/* Posts List */}
-      <Accordion type="single" collapsible className="w-full">
+      <Accordion type="single" collapsible className="w-full ">
         {currentPosts.map((post, index) => (
-          <AccordionItem key={index} value={`item-${startIndex + index}`} className="border-b border-border py-2">
+          <AccordionItem key={index} value={`item-${startIndex + index}`} className="border-b border-border py-2 px-10">
             <AccordionTrigger className="hover:no-underline">
               <div className="flex items-center justify-between w-full">
                 <span className="text-sm text-left">{post.title}</span>
@@ -148,7 +151,7 @@ export default function MainPost() {
             </AccordionContent>
           </AccordionItem>
         ))}
-      </Accordion>
+      </Accordion></div>
 
       {/* Pagination */}
       <div className="flex justify-center items-center gap-4 mt-8">

@@ -52,7 +52,7 @@ export default function Body2() {
         {/* content div */}
         <div className='w-full h-full mt-4 md:mt-0 flex justify-center items-center'>
             {/* main div */}
-          <div className='md:w-[70%] w-[90%] md:h-[783px] flex flex-col  '>
+          <div className='md:w-[70%] w-[90%] flex flex-col  '>
           <div className='md:text-[45px] text-[30px] text-center noto-sans-kr-bold border-[#DDDDDD] pb-8'>하우스백 입주절차안내</div>
           <div>
              {/* Map through Body_Content and pass each object to Body2_Content */}

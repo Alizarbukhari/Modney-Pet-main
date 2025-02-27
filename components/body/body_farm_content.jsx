@@ -91,25 +91,25 @@ export default function Body_Form_Content() {
                     <div className='text-[23px] noto-sans-kr-bold'>강아지 사진</div>
 
                     <div className="flex  md:gap-4  gap-1">
-                        <div className="md:w-[230px] w-[110px] h-[31px]  md:h-[50px]">
+                        <div className="md:w-[230px] w-[110px] h-[31px] relative md:h-[50px]">
                             <input type="text" placeholder='몸무게'
                                 className='w-full h-full md:placeholder:text-[16px] placeholder:text-[11px] md:h-[50px] border-[2px] px-2 border-[#D7D7D7]' />
-                            <span className="absolute md:text-[16px] text-[11px] noto-sans-kr text-[#939393] md:right-[935px] right-[255px] md:mt-3 mt-2"> kg</span>
+                            <span className="absolute md:text-[16px] text-[11px] noto-sans-kr text-[#939393] md:right-3 right-2 md:mt-3 mt-2"> kg</span>
 
                         </div>
                         {/* 2 */}
-                        <div className="md:w-[230px] w-[110px] h-[31px]  md:h-[50px]">
+                        <div className="md:w-[230px] w-[110px] h-[31px] relative  md:h-[50px]">
                             <input type="text" placeholder='체고'
                                 className='w-full h-full md:placeholder:text-[16px] placeholder:text-[11px] md:h-[50px] border-[2px] px-2 border-[#D7D7D7]' />
-                            <span className="absolute text-[11px] md:text-[16px] noto-sans-kr md:right-[715px] text-[#939393] md:mt-3 right-[160px] mt-2"> cm</span>
+                            <span className="absolute text-[11px] md:text-[16px] noto-sans-kr md:right-3 text-[#939393] md:mt-3 right-2 mt-2"> cm</span>
 
                         </div>
                         {/* 3 */}
-                        <div className="md:w-[230px] w-[110px] h-[31px]  md:h-[50px]">
+                        <div className="md:w-[230px] w-[110px] h-[31px] relative md:h-[50px]">
                             <input type="text" placeholder='등길이'
                                 className='w-full h-full md:placeholder:text-[16px] placeholder:text-[11px] md:h-[50px] border-[2px] px-2 border-[#D7D7D7]' />
 
-                            <span className="absolute text-[11px] noto-sans-kr md:text-[16px] text-[#939393]  md:right-[515px] md:mt-3 right-16 mt-2"> kg</span>
+                            <span className="absolute text-[11px] noto-sans-kr md:text-[16px] text-[#939393]  md:right-3 md:mt-3 right-16 mt-2"> kg</span>
                         </div>
                     </div>
                 </div>

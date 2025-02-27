@@ -1,9 +1,10 @@
 import Link from "next/link"
 import { MessageCircle, ImageIcon } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer2() {
   return (
-    <footer className="bg-black text-white px-4 py-8 md:py-12">
+    <footer className="bg-black text-white  px-4 py-8 md:py-12">
       <div className="max-w-6xl mx-auto">
         {/* Company Name */}
         <h2 className="text-2xl font-bold mb-4">모드니펫 MODNEYPET</h2>
@@ -24,28 +25,31 @@ export default function Footer2() {
         </div>
 
         {/* Social Icons */}
-        <div className="flex flex-wrap gap-4 mb-6">
+        <div className="flex flex-wrap  gap-4 mb-6">
           <Link href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-            <span className="text-black font-bold">N</span>
+            <Image src = "/footer/N.svg" width= {16} height={10} alt="N"/>
           </Link>
           <Link href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-            <MessageCircle className="w-5 h-5 text-black" />
+          <Image src = "/footer/blog.svg" width= {16} height={10} alt="blog"/>
           </Link>
           <Link href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-            <ImageIcon className="w-5 h-5 text-black" />
+          <Image src = "/footer/talk.svg" width= {16} height={10} alt="talk"/>
           </Link>
           <Link href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-            <span className="text-black font-bold">@</span>
+          <Image src = "/footer/insta.svg" width= {16} height={10} alt="insta"/>
           </Link>
           <Link href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-            <span className="text-black font-bold">n</span>
+          <Image src = "/footer/u.svg" width= {16} height={10} alt="u"/>
           </Link>
           <Link href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-            <span className="text-black font-bold">○</span>
+          <Image src = "/footer/o.svg" width= {16} height={10} alt="o"/>
           </Link>
           <Link href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-            <span className="text-black font-bold">●</span>
+          <Image src = "/footer/ponja.svg" width= {16} height={10} alt="ponja"/>
           </Link>
+        </div>
+        <div className="border-b-2 border-white mb-5">
+
         </div>
 
         {/* Copyright */}
