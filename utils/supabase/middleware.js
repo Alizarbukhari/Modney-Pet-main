@@ -1,13 +1,9 @@
-
-import { createServerClient} from "@supabase/ssr";
+import { createServerClient } from "@supabase/ssr";
 import { NextResponse } from "next/server";
 
 export const createClient = (request) => {
-  // Create an unmodified response
-  let supabaseResponse = NextResponse.next({
-    request: {
-      headers: request.headers,
-    },
+  let response = NextResponse.next({
+    request: { headers: request.headers }
   });
 
   const supabase = createServerClient(
@@ -16,21 +12,31 @@ export const createClient = (request) => {
     {
       cookies: {
         getAll() {
-          return request.cookies.getAll()
+          return request.cookies.getAll();
         },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value, options }) => request.cookies.set(name, value))
-          supabaseResponse = NextResponse.next({
-            request,
-          })
-          cookiesToSet.forEach(({ name, value, options }) =>
-            supabaseResponse.cookies.set(name, value, options)
-          )
+          // Sirf RESPONSE cookies ko update karo
+          cookiesToSet.forEach(({ name, value, options }) => {
+            response.cookies.set({
+              name,
+              value,
+              ...options // Options add karo (path, secure, etc.)
+            });
+          });
         },
-      },
-    },
+        removeAll(cookiesToRemove) {
+          cookiesToRemove.forEach(({ name, options }) => {
+            response.cookies.set({
+              name,
+              value: "",
+              ...options,
+              maxAge: 0 // Cookie delete karne ke liye
+            });
+          });
+        }
+      }
+    }
   );
 
-  return supabaseResponse
+  return { supabase, response };
 };
-

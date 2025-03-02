@@ -1,9 +1,27 @@
 "use client"
 import Image from "next/image";
-import { useState } from "react";
+import { useState,useRef } from "react";
 
 export default function Body_Form_Content() {
     const [selectedImage, setSelectedImage] = useState(false)
+    const [dob,setDob] = useState("")
+    const dateInputRef= useRef(null)
+    const handleDateChange = (e) => {
+        setDob(e.target.value);
+      };
+    
+      const handleCalendarClick = () => {
+        // Trigger the hidden date input to open the date picker
+        if (dateInputRef.current) {
+          // showPicker() is supported in some browsers; fallback to click()
+          if (typeof dateInputRef.current.showPicker === "function") {
+            dateInputRef.current.showPicker();
+          } else {
+            dateInputRef.current.click();
+          }
+        }
+      };
+    
 
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
@@ -71,16 +89,25 @@ export default function Body_Form_Content() {
                     <div className='flex flex-col gap-[20px]'>
                         <div className='md:text-[23px] text-[12px] noto-sans-kr-bold'>강아지 이름 </div>
                         <div className='relative '>
-                            <input type="text" placeholder='이름을 입력하세요.'
-                                className='md:w-[300px] placeholder:text-start w-[140px] md:h-[50px] border-[2px] px-6 border-[#D7D7D7] md:placeholder:text-[16px] placeholder:text-[10px]' />
+                            <input type="date"
+                            placeholder='이름을 입력하세요.'
+                                className='md:w-[300px] placeholder:text-start w-[140px] md:h-[50px] border-[2px] px-6 border-[#D7D7D7] md:placeholder:text-[16px] placeholder:text-[10px]' 
+                                
+                                onChange={handleDateChange}
+                                ref={dateInputRef}
+                                />
 
-                            <div className="md:w-[24px] absolute right-2 md:right-7 top-1/2 transform -translate-y-1/2 md:h-[24px] w-[12px] h-[12px] "> <Image
+                            <div className="md:w-[24px] absolute right-2 md:right-7 top-1/2 transform -translate-y-1/2 md:h-[24px] w-[12px] h-[12px] "
+                                    onClick={handleCalendarClick}
+
+                            > 
+                            {/* <Image
                                 src={`/calender.png`}
                                 alt="calender"
                                 height={12}
                                 width={12}
                                 className=" w-full h-full "
-                            />
+                            /> */}
                             </div>
                         </div>
 
