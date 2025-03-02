@@ -68,9 +68,6 @@ export async function POST(req) {
     }
 
     else {
-      // 토큰 생성 
-
-
       const token = jwt.sign({ user_id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
 

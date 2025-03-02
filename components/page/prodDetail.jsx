@@ -22,7 +22,7 @@ function ProdDetail() {
                         <div className="flex flex-col gap-7 text-[1rem] text-white text-center">
                             <p>안녕하세요.</p>
                             <p>
-                                하우스백 시리즈를 구입해주셔서<br />
+                                하우스백 시리즈를 구입해주셔서 <br />
                                 진심으로 감사합니다.
                             </p>
                             <p>모드니펫은 펫 주거환경 개선을 위해 노력하는 브랜드입니다.</p>

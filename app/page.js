@@ -23,6 +23,7 @@ import png2 from '@/public/main/2.png'
 import png3 from '@/public/main/3.png'
 import png4 from '@/public/main/4.png'
 import png2_1 from '@/public/main/2-1.png'
+import { useRouter } from 'next/navigation'
 
 import Register from '@/components/register'
 import Login from '@/components/page/Login'
@@ -33,7 +34,9 @@ import Dogshome from '@/components/dogsHome'
 function page() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isValid, setIsValid] = useState(false);
+  const router = useRouter();
 
+  // Agar cookie ke through validation check karna ho to yeh uncomment kar sakte ho:
   // useEffect(() => {
   //   const user_serial = getCookie('user_serial');
   //   if (user_serial) {
@@ -41,14 +44,21 @@ function page() {
   //   }
   // }, []);
 
+  // Yeh useEffect hook jab isValid change ho to check karega
+  useEffect(() => {
+    if (isValid) {
+      // Agar isValid true ho, to user ko /main page pe redirect kar do
+      router.push('/main');
+    }
+  }, [isValid, router]);
+
   console.log("isValid", isValid);
   return (
     <>
 
       {isValid ? (
         <>
-          <Header></Header>
-          <ProdDetail></ProdDetail>
+          
         </>
       ) : (
         <>
