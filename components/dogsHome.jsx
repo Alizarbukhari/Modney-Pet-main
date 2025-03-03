@@ -50,7 +50,7 @@ export default function Dogshome() {
 
   return (
     <div className="w-full  flex flex-col items-center bg-[#F7F7F7]">
-      <h2 className="text-[35px] mt-24 noto-sans-kr-bold mb-12 w-[280px] h-[55px]">
+      <h2 className="text-[35px] mt-24 text-center noto-sans-kr-bold mb-12 w-[280px] h-[55px]">
         입주를 환영합니다
       </h2>
       <div className="flex gap-4 mb-40">

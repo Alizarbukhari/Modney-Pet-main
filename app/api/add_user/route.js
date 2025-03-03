@@ -5,8 +5,8 @@ import bcrypt from 'bcrypt';
 
 export async function POST(req) {
   const supabase = await createClient();
-  const { user_id, password, user_serial, dog_name, dog_birth, dog_body_shape, dog_body_kg, dog_body_length, dog_type, address, address_detail, phone, email } = await req.json();
-  // console.log("user_id", user_id, "password", password, "user_serial", user_serial, "dog_name", dog_name, "dog_birth", dog_birth, "dog_body_shape", dog_body_shape, "dog_body_kg", dog_body_kg, "dog_body_length", dog_body_length, "dog_type", dog_type, "address", address, "address_detail", address_detail, "phone", phone, "email", email);
+  const { user_id, password, user_serial, dog_name, dog_date_of_birth, dog_body_shape, dog_body_kg, dog_body_length, dog_type, address, address_detail, phone, email,imageName } = await req.json();
+  console.log("user_id", user_id, "password", password, "user_serial", user_serial, "dog_name", dog_name, "dog_date_of_birth", dog_date_of_birth, "dog_body_shape", dog_body_shape, "dog_body_kg", dog_body_kg, "dog_body_length", dog_body_length, "dog_type", dog_type, "address", address, "address_detail", address_detail, "phone", phone, "email", email,imageName,"imageName");
 
   let { data: check_serial, error: res_error } = await supabase
     .from('product')
@@ -54,7 +54,7 @@ export async function POST(req) {
     const { data, error } = await supabase
       .from('user')
       .insert([
-        { user_id: user_id, password: hashed_password, serial: user_serial, dog_name: dog_name, dog_birth: dog_birth, dog_body_shape: dog_body_shape, dog_body_kg: dog_body_kg, dog_body_length: dog_body_length, dog_type: dog_type, address: address, address_detail: address_detail, phone: phone, email: email },
+        { user_id: user_id, password: hashed_password, serial: user_serial, dog_name: dog_name, dog_date_of_birth: dog_date_of_birth, dog_body_shape: dog_body_shape, dog_body_kg: dog_body_kg, dog_body_length: dog_body_length, dog_type: dog_type, address: address, address_detail: address_detail, phone: phone, email: email ,imageName:imageName},
       ])
       .select()
 
@@ -68,9 +68,6 @@ export async function POST(req) {
     }
 
     else {
-      // 토큰 생성 
-
-
       const token = jwt.sign({ user_id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
 
