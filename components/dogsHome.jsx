@@ -41,6 +41,13 @@ export default function Dogshome() {
     );
   };
 
+  const getAge = (dateString) => {
+    const date = new Date(dateString);
+    const today = new Date();
+    const age = today.getFullYear() - date.getFullYear();
+    return age;
+  }
+
   // Touch handlers
   let touchStartX = 0;
   const handleTouchStart = (e) => {
@@ -89,7 +96,7 @@ export default function Dogshome() {
                     className="rounded-lg object-cover"
                   />
                   <div className="flex text-center justify-center text-[16px] noto-sans-kr-bold">
-                    {pet.dog_name}
+                    {`${pet.dog_name} (${getAge(pet.dog_date_of_birth)}살)`}
                   </div>
                 </div>
               ))}

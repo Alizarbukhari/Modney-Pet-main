@@ -21,8 +21,11 @@ export default function Body_Form_Content() {
     const [selectedFile, setSelectedFile] = useState(null); // For storing actual file
 
     const handleCalendarClick = () => {
+        console.log('test')
+        console.log("dateInputRef.current", dateInputRef.current);
         if (dateInputRef.current) {
             dateInputRef.current.showPicker?.() || dateInputRef.current.click();
+            
         }
     };
 
@@ -86,8 +89,9 @@ export default function Body_Form_Content() {
     const handleChange = (e, name) => {
         setUserInfo({
             ...user_info,
-            [name]: e.target.value
+            [name]: String(e.target.value)
         });
+        console.log("user_info", user_info);
     };
 
     const handleLogin = async () => {
@@ -226,10 +230,13 @@ export default function Body_Form_Content() {
                     <div className='flex flex-col gap-[20px]'>
                         <div className='md:text-[23px] text-[12px] noto-sans-kr-bold'>생년월일</div>
                         <div className='relative '>
-                            <input onChange={(e) => handleChange(e, 'dog_date_of_birth')} type="date"
+                            <input onChange={(e) => {
+                                handleChange(e, 'dog_date_of_birth')
+                                console.log("e.target.value", e.target.value)
+                            }} type="date"
                                 ref={dateInputRef}
                                 value={user_info.dog_date_of_birth}
-                                placeholder='날짜를 선택하세요.'
+                                placeholder='생년월일'
                                 className='md:w-[300px] placeholder:text-start w-[140px] md:h-[50px] border-[2px] px-6 border-[#D7D7D7] md:placeholder:text-[16px] placeholder:text-[10px]'
                             />
                             <div className="md:w-[24px] absolute right-2 md:right-7 top-1/2 transform -translate-y-1/2 md:h-[24px] w-[12px] h-[12px] "
