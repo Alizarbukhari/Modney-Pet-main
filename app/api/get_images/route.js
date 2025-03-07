@@ -8,7 +8,7 @@ export async function GET(req) {
   // Query the user table to get the dog_name and imageName for all users
   let { data, error } = await supabase
     .from('user')
-    .select('dog_name, imageName');
+    .select('dog_name, imageName,dog_date_of_birth');
     
   console.debug("Query result - Data:", data, "Error:", error);
 
