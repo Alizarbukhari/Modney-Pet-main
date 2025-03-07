@@ -89,8 +89,8 @@ export default function MainPost() {
   )
 
   return (
-    <div className="container mx-auto p-4 max-w-4xl">
-      <h1 className="text-2xl font-bold text-center py-20">입주건 커뮤니티 개시판</h1>
+    <div className="container mx-auto p-4  mt-[80px] max-w-4xl">
+      <h1 className="text-[20px] noto-sans-kr text-center mb-8">입주건 커뮤니티 개시판</h1>
 
       {/* Navigation */}
       <div
@@ -100,12 +100,12 @@ export default function MainPost() {
         style={{ touchAction: "pan-x" }}
       >
         <div className="border-b-2 border-black px-10">
-        <div className="flex gap-3  whitespace-nowrap pb-6 ">
-          {["전체", "공지사항", "자주묻는질문", "1:1 문의", "맴버십혜택"].map((tab) => (
+        <div className="flex gap-3  whitespace-nowrap pb-3 ">
+          {["전체 " ,"|", "공지사항 ", "자주묻는질문", "1:1 문의", "맴버십혜택"].map((tab) => (
             <Button
               key={tab}
               variant="link"
-              className={activeTab === tab ? "text-primary" : "text-muted-foreground noto-sans-kr "}
+              className={activeTab === tab ? "text-primary rounded-none   border-[#878787] text-black font-bold noto-sans-kr"  : "text-muted-foreground  noto-sans-kr   border-[#878787] text-[#878787]"}
               onClick={() => setActiveTab(tab)}
               data-active={activeTab === tab}
             >
@@ -139,7 +139,7 @@ export default function MainPost() {
       {/* Posts List */}
       <Accordion type="single" collapsible className="w-full ">
         {currentPosts.map((post, index) => (
-          <AccordionItem key={index} value={`item-${startIndex + index}`} className="border-b border-border py-2 px-10">
+          <AccordionItem key={index} value={`item-${startIndex + index}`} className="border-b border-border py-2 px-3 md:px-10">
             <AccordionTrigger className="hover:no-underline">
               <div className="flex items-center justify-between w-full">
                 <span className="text-sm text-left">{post.title}</span>
@@ -147,7 +147,7 @@ export default function MainPost() {
               </div>
             </AccordionTrigger>
             <AccordionContent>
-              <p className="text-sm text-muted-foreground pt-2 pb-4">{post.content}</p>
+              <p className="text-[11px] md:text-[13px] text-[#878787] text-muted-foreground pt-2 pb-4">{post.content}</p>
             </AccordionContent>
           </AccordionItem>
         ))}

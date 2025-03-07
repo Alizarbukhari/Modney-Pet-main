@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
@@ -6,7 +6,9 @@ export default function Dogshome() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [petsData, setPetsData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const visibleCount = 4;
+  const [visibleCount, setVisibleCount] = useState(6); // Default to 6 for mobile view
+  const initialVisibleCountMobile = 6; // Mobile count
+  const initialVisibleCountDesktop = 4; // Desktop count
 
   // Fetch data from API and filter valid pets
   useEffect(() => {
@@ -29,6 +31,25 @@ export default function Dogshome() {
     fetchPets();
   }, []);
 
+  // Handle screen resize for changing visible images based on screen width
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      if (window.innerWidth < 768) {
+        setVisibleCount(initialVisibleCountMobile); // Set visibleCount to 6 for mobile
+      } else {
+        setVisibleCount(initialVisibleCountDesktop); // Set visibleCount to 4 for desktop
+      }
+    };
+
+    updateVisibleCount(); // Set initial count based on current window size
+    window.addEventListener('resize', updateVisibleCount); // Update count on window resize
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', updateVisibleCount);
+    };
+  }, []);
+
   const nextSlide = () => {
     setCurrentIndex(prev =>
       prev >= petsData.length - visibleCount ? 0 : prev + 1
@@ -46,7 +67,16 @@ export default function Dogshome() {
     const today = new Date();
     const age = today.getFullYear() - date.getFullYear();
     return age;
-  }
+  };
+
+  // Handle load more button click to show more pets
+  const loadMorePets = () => {
+    if (visibleCount + initialVisibleCountDesktop <= petsData.length) {
+      setVisibleCount(visibleCount + initialVisibleCountDesktop); // Increase the visible count by 4 (for desktop)
+    } else {
+      setVisibleCount(petsData.length); // Show all remaining pets if less than 4
+    }
+  };
 
   // Touch handlers
   let touchStartX = 0;
@@ -75,7 +105,7 @@ export default function Dogshome() {
   return (
     <div className="w-full flex flex-col items-center bg-[#F7F7F7]">
       {/* Carousel Header and Container */}
-      <div className="flex gap-4 mb-40">
+      <div className="flex gap-4 mb-6">
         {/* Left Button */}
         <button className="hidden md:flex items-center justify-center z-10 rounded-2xl" onClick={prevSlide}>
           <Image src={"/pet-images/left.svg"} width={19} height={33} alt="left" />
@@ -83,10 +113,10 @@ export default function Dogshome() {
 
         <div className="relative">
           {/* Desktop View Carousel */}
-          <div className="relative w-[891px] h-[231px] mx-auto overflow-hidden md:flex md:items-center hidden">                  
+          <div className="relative w-[891px] h-[231px] mx-auto overflow-hidden md:flex md:items-center hidden">
             <div className="flex gap-6 transition-transform duration-300 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 204}px)` }}>
-              {petsData.map((pet, index) => (
+              {petsData.slice(0, visibleCount).map((pet, index) => (
                 <div key={index} className="flex-shrink-0">
                   <Image
                     src={`/product_image/${pet.imageName}`}
@@ -107,17 +137,25 @@ export default function Dogshome() {
           <div className="md:hidden grid grid-cols-2 gap-4"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}>
-            {petsData.map((pet, index) => (
-              <div key={index}>
+            {petsData.slice(0, visibleCount).map((pet, index) => (
+              <div key={index} className="h-[169px] w-[169.59px]">
                 <Image
                   src={`/product_image/${pet.imageName}`}
                   alt={pet.dog_name}
                   width={169.59}
                   height={169.59}
-                  className="rounded-lg object-cover"
+                  className="rounded-lg w-full h-full"
                 />
               </div>
             ))}
+          </div>
+
+          {/* Load More Button */}
+          <div className="w-full flex justify-center py-[50px]">
+            <button className="w-[94px] h-[21px] bg-white border-[1px] border-black"
+              onClick={loadMorePets}>
+              더보기
+            </button>
           </div>
         </div>
 
