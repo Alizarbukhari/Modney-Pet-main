@@ -230,7 +230,7 @@ export default function Body_Form_Content() {
                                 ref={dateInputRef}
                                 value={user_info.dog_date_of_birth}
                                 placeholder='날짜를 선택하세요.'
-                                className='md:w-[300px] placeholder:text-start w-[140px] md:h-[50px] border-[2px] px-6 border-[#D7D7D7] md:placeholder:text-[16px] placeholder:text-[10px]'
+                                className='md:w-[300px]  placeholder:text-start w-[140px] md:h-[50px] border-[2px] md:px-6 px-2 border-[#D7D7D7] md:placeholder:text-[16px] placeholder:text-[10px]'
                             />
                             <div className="md:w-[24px] absolute right-2 md:right-7 top-1/2 transform -translate-y-1/2 md:h-[24px] w-[12px] h-[12px] "
                                 onClick={handleCalendarClick}>
@@ -260,7 +260,7 @@ export default function Body_Form_Content() {
                                 onChange={(e) => handleChange(e, 'dog_body_length')}
                                 type="text" placeholder='등길이'
                                 className='w-full h-full md:placeholder:text-[16px] placeholder:text-[11px] border-[2px] px-2 border-[#D7D7D7]' />
-                            <span className="absolute text-[11px] noto-sans-kr md:text-[16px] text-[#939393]  md:right-3 md:mt-3 right-16 mt-2"> cm</span>
+                            <span className="absolute text-[11px] noto-sans-kr md:text-[16px] text-[#939393]  md:right-3 md:mt-3 right-6 mt-2"> cm</span>
                         </div>
                     </div>
                 </div>
