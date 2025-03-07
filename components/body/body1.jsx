@@ -23,9 +23,9 @@ export default function Body1() {
             />
             </div>
             {/* paragraph */}
-          <div className='flex flex-col  px-2  text-center  mt-8 text-[18px]  fontweight: 700;'>
+          <div className='flex flex-col  px-2  leading-[2rem] text-center  mt-8 text-[18px]  fontweight: 700;'>
              <p className='md:text-[18px] text-[15px] noto-sans-kr  '>
-             <span className='noto-sans-kr-bold '>
+             <span className='noto-sans-kr-bold  '>
              하우스백</span>을 선택해 주시고, 소중한 반려동물에게 <br className='md:hidden' /> <span className='noto-sans-kr-bold '>특별한 보금자리 </span>를 마련해 주셔서 진심으로 감사드립니다. <br />
              </p>
              <p className=' mt-4 md:text-[16.5px] text-[15px] md:mt-0'><span className='noto-sans-kr-bold '>하우스백 </span>은 단순한 가방이 아닌,<span className='noto-sans-kr-bold'> 반려동물과 함께하는 삶을 더욱 편안하고 가치 있게 만들어 줄 공간 </span>입니다.</p>

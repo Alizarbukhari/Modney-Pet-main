@@ -90,7 +90,7 @@ export default function MainPost() {
 
   return (
     <div className="container mx-auto p-4 max-w-4xl">
-      <h1 className="text-2xl font-bold text-center py-20">입주건 커뮤니티 개시판</h1>
+      <h1 className="text-[38px] font-[900] text-center py-20">입주견 커뮤니티 게시판</h1>
 
       {/* Navigation */}
       <div
@@ -142,8 +142,8 @@ export default function MainPost() {
           <AccordionItem key={index} value={`item-${startIndex + index}`} className="border-b border-border py-2 px-10">
             <AccordionTrigger className="hover:no-underline">
               <div className="flex items-center justify-between w-full">
-                <span className="text-sm text-left">{post.title}</span>
-                <span className="text-sm text-muted-foreground">공지사항</span>
+                <span className="text-[15px] text-left">{post.title}</span>
+                <span className="text-[15px] text-muted-foreground">공지사항</span>
               </div>
             </AccordionTrigger>
             <AccordionContent>
@@ -154,7 +154,7 @@ export default function MainPost() {
       </Accordion></div>
 
       {/* Pagination */}
-      <div className="flex justify-center items-center gap-4 mt-8">
+      <div className="flex justify-center items-center gap-4 mt-8 mb-[124px]">
         <Button variant="outline" size="icon" onClick={goToPrevPage} disabled={currentPage === 1}>
           <ChevronLeft className="h-4 w-4" />
         </Button>

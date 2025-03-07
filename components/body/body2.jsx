@@ -46,15 +46,15 @@ export default function Body2() {
     
   }]
   return (
-    <div className='md:w-[95%] w-[100%] md:h-[1127px]   border-t md:border-[2px] border-[#A5A5A5] bg-[#FFFCF3]'>
+    <div className='md:w-[95%] w-[100%] border-t md:border-[2px] border-[#A5A5A5] bg-[#FFFCF3]'>
         {/* button div */}
         <div><Button title="하우스 오너"/></div>
         {/* content div */}
-        <div className='w-full h-full mt-4 md:mt-0 flex justify-center items-center'>
+        <div className='w-full h-full mt-4 md:mt-0 flex justify-center items-center '>
             {/* main div */}
-          <div className='md:w-[70%] w-[90%] flex flex-col  '>
-          <div className='md:text-[45px] text-[30px] text-center noto-sans-kr-bold border-[#DDDDDD] pb-8'>하우스백 입주절차안내</div>
-          <div>
+          <div className='md:w-[70%] w-[90%] flex flex-col my-[100px]'>
+          <div className='md:text-[45px] text-[30px] text-center noto-sans-kr-bold  pb-8 border-[#DDDDDD] border-b-2'>하우스백 입주절차안내</div>
+          <div className='body2_content-wrapper '>
              {/* Map through Body_Content and pass each object to Body2_Content */}
           {Body_Content.map((item) => (
             <Body2_Content
