@@ -26,10 +26,10 @@ export default function Body2_Content(props) {
   };
 
   return (
-    <div className="w-full md:px-[200px] py-6 border-[#DDDDDD] border-t-2 bg-[#FFFCF3]">
+    <div className="w-full md:px-[200px] py-6 border-[#DDDDDD] border-b-2 bg-[#FFFCF3]">
       {/* Header Section */}
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-2 ">
+        <div className="flex items-center gap-[42px] ">
           <div className="md:text-[85px] text-[24px] noto-sans-kr-bold">{props.id}</div>
           <p className="md:text-[35px] text-[16px] noto-sans-kr-bold">{props.title}</p>
         </div>
@@ -55,21 +55,21 @@ export default function Body2_Content(props) {
       >
         <div className="">
           <div className="flex flex-col md:flex-row md:gap-4 mx-[20px] md:mx-[54px]">
-            <h2 className="md:text-2xl text-[14px] noto-sans-kr-bold md:mb-4 w-[210px]">{props.T1}</h2>
-            <p className="md:text-[18px] noto-sans-kr text-[#666666] text-[12px] mb-4">
+            <h2 className="md:text-[18px] text-[14px] noto-sans-kr-bold md:mb-4 w-[210px]">{props.T1}</h2>
+            <p className="md:text-[16px] noto-sans-kr text-[#666666] text-[12px] mb-4">
               {props.p1}
             </p>
           </div>
           {/* 2 */}
           <div className="flex flex-col md:flex-row md:gap-4 mx-[20px] md:mx-[52px]">
-            <h2 className="md:text-2xl text-[14px] noto-sans-kr-bold md:mb-4 w-[210px]">{props.T2}</h2>
-            <p className="md:text-[18px] noto-sans-kr text-[#666666] text-[12px] mb-4">
+            <h2 className="md:text-[18px] text-[14px] noto-sans-kr-bold md:mb-4 w-[210px]">{props.T2}</h2>
+            <p className="md:text-[16px] noto-sans-kr text-[#666666] text-[12px] mb-4">
             {props.p2} </p>
           </div>
           {/* 3 */}
           <div className="flex flex-col md:flex-row md:gap-4 mx-[20px] md:mx-[52px]">
-            <h2 className="md:text-2xl text-[14px] noto-sans-kr-bold md:mb-4 w-[210px]">{props.T3}</h2>
-            <p className="md:text-[18px] noto-sans-kr text-[#666666] text-[12px] mb-4">
+            <h2 className="md:text-[18px] text-[14px] noto-sans-kr-bold md:mb-4 w-[210px]">{props.T3}</h2>
+            <p className="md:text-[16px] noto-sans-kr text-[#666666] text-[12px] mb-4">
             {props.p3}</p>
           </div>
         </div>

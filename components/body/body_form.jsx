@@ -13,7 +13,7 @@ export default function Body_Form() {
         {/* content div */}
         <div className='w-full h-full flex flex-col items-center'>
             {/* title */}
-            <div className='md:text-[45px] text-[24px]   noto-sans-kr-bold text-center'>하우스백을 d<br/>
+            <div className='md:text-[45px] text-[24px]   noto-sans-kr-bold text-center'>하우스백을<br/>
             분양받으시겠습니까?</div>
            <Body_Form_Content/>
         </div>

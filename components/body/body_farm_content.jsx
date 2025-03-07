@@ -296,23 +296,24 @@ export default function Body_Form_Content() {
                             onChange={(e) => handleChange(e, 'phone')}
                             type="text" placeholder='01012345678 (-없이)'
                             className='w-[170px] md:w-[443px] md:h-[50px] md:placeholder:text-[16px] placeholder:text-[11px] border-[2px] px-6 border-[#D7D7D7]' />
+                            
                     </div>
                     <button className="w-[81px] md:w-[167px] md:h-[50px] md:text-[16px] mt-11 bg-[#333333] h-[31px] noto-sans-kr-bold text-white text-[11px]"> 인증번호 전송 </button>
                 </div>
                 <div className="flex flex-row  gap-4">
                     <div className="flex flex-row">
                         <div className='flex flex-col gap-[10px]'>
-                            <div className='text-[23px] noto-sans-kr-bold'>주소 상세</div>
+                            
                             <input
                                 onChange={(e) => handleChange(e, 'address_detail')}
-                                type="text" placeholder='주소를 입력하세요.'
+                                type="text" placeholder='인증번호 입력'
                                 className='w-[130px] md:w-[349px] md:h-[50px] md:placeholder:text-[16px] placeholder:text-[11px] border-[2px] px-6 border-[#D7D7D7]' />
                         </div>
-                        <button className="w-[45px] md:w-[90px] md:h-[50px]  noto-sans-kr-bold text-white text-[11px] md:text-[16px] mt-11  bg-[#333333]">
+                        <button className="w-[45px] md:w-[90px] md:h-[50px]  noto-sans-kr-bold text-white text-[11px] md:text-[16px]  bg-[#333333]">
                             확인
                         </button>
                     </div>
-                    <button className="w-[86px] md:w-[167px] md:h-[50px] md:text-[16px] mt-11 bg-[#333333] h-[31px] noto-sans-kr-bold text-white text-[11px]"> 재전송</button>
+                    <button className="w-[86px] md:w-[167px] md:h-[50px] md:text-[16px]  bg-[#333333] h-[31px] noto-sans-kr-bold text-white text-[11px]"> 재전송</button>
                 </div>
                 <div className=" flex flex-col gap-[17px]">
                     <div className='flex flex-col gap-[10px]'>
