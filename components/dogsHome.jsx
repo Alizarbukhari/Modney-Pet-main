@@ -107,7 +107,7 @@ export default function Dogshome() {
       {/* Carousel Header and Container */}
       <div className="flex gap-4">
         {/* Left Button */}
-        <button className="hidden md:flex items-center justify-center z-10 rounded-2xl" onClick={prevSlide}>
+        <button className="hidden md:flex  items-center justify-center z-10 rounded-2xl" onClick={prevSlide}>
           <Image src={"/pet-images/left.svg"} width={19} height={33} alt="left" />
         </button>
 
@@ -154,7 +154,7 @@ export default function Dogshome() {
           </div>
 
           {/* Load More Button */}
-          <div className="w-full flex justify-center py-[50px]">
+          <div className="w-full flex justify-center md:hidden py-[50px]">
             <button className="w-[94px] h-[21px] bg-white border-[1px] border-black"
               onClick={loadMorePets}>
               더보기
