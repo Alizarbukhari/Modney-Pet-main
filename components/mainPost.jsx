@@ -90,7 +90,7 @@ export default function MainPost() {
 
   return (
     <div className="container mx-auto p-4  mt-[80px] max-w-4xl">
-      <h1 className="text-[20px] noto-sans-kr text-center mb-8">입주건 커뮤니티 개시판</h1>
+      <h1 className="text-[20px] md:text-[38px] noto-sans-kr-bold text-center  text-[#000000] mb-8">입주건 커뮤니티 개시판</h1>
 
       {/* Navigation */}
       <div
