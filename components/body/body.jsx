@@ -25,7 +25,7 @@ export default function Body() {
     <>
       <div className='w-[100%]  flex flex-col justify-center items-center bg-[#FFFCF3]'>
         {/* div 1 */}
-        <div className='md:w-[95%] h-[400px] md:h-[531px] w-[100%]   border-t-2 md:border-[2px] border-[#A5A5A5] md:mt-8'>
+        <div className='md:w-[95%] h-[450px] md:h-[531px] w-[100%]   border-t-2 md:border-[2px] border-[#A5A5A5] md:mt-8'>
           {/* black button */}
           <Button title="모드니펫" />
           {/* center content */}
