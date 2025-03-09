@@ -31,11 +31,10 @@ export default function Dogshome() {
     fetchPets();
   }, []);
 
-  // Handle screen resize for changing visible images based on screen width
   useEffect(() => {
     const updateVisibleCount = () => {
       if (window.innerWidth < 768) {
-        setVisibleCount(initialVisibleCountMobile); // Set visibleCount to 6 for mobile
+        setVisibleCount(initialVisibleCountMobile); 
       } else {
         setVisibleCount(initialVisibleCountDesktop); // Set visibleCount to 4 for desktop
       }
@@ -103,16 +102,16 @@ export default function Dogshome() {
   }
 
   return (
-    <div className="w-full flex flex-col items-center bg-[#F7F7F7]   h-full  justify-center">
+    <div className="w-full flex flex-col items-center bg-[#F7F7F7] justify-center md:h-[678px]">
       {/* Carousel Header and Container */}
       <div className="flex gap-4  my-20">
         {/* Left Button */}
-        <button className="hidden md:flex  items-center justify-center z-10 rounded-2xl" onClick={prevSlide}>
+        <button className="hidden md:flex  items-center justify-center mr-4 z-10 mt-[104px] " onClick={prevSlide}>
           <Image src={"/pet-images/left.svg"} width={19} height={33} alt="left" />
         </button>
 
         <div className="relative">
-          <div className="text-black text-center font-[900] text-[20px] md:text-[38px] mb-[98px]">입주를 환영합니다</div>
+          <div className="text-black text-center font-[900] noto-sans-kr-bold text-[20px] md:text-[38px] mb-[98px]">입주를 환영합니다</div>
           {/* Desktop View Carousel */}
           <div className="relative w-[891px] mx-auto overflow-hidden md:flex md:items-center hidden">
 
@@ -154,8 +153,8 @@ export default function Dogshome() {
           </div>
 
           {/* Load More Button */}
-          <div className="w-full flex justify-center md:hidden ">
-            <button className="w-[94px] h-[21px] bg-white border-[1px] border-black"
+          <div className="w-full flex justify-center  md:hidden mt-14 noto-sans-kr  ">
+            <button className="w-[94px] h-[21px] text-[14px] bg-white border-[1px]  border-black"
               onClick={loadMorePets}>
               더보기
             </button>
@@ -163,7 +162,7 @@ export default function Dogshome() {
         </div>
 
         {/* Right Button */}
-        <button className="hidden md:flex" onClick={nextSlide}>
+        <button className="hidden md:flex mt-[104px]" onClick={nextSlide}>
           <Image src={"/pet-images/right.svg"} width={19} height={33} alt="right" />
         </button>
       </div>
