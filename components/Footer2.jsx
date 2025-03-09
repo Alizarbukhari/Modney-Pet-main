@@ -4,8 +4,8 @@ import Image from "next/image"
 
 export default function Footer2() {
   return (
-    <div className="bg-black text-white h-[373px] md:h-[451px]  w-full flex justify-center ">
-      <div className="w-[390px] h-[224px] noto-sans-kr md:w-[1282px] md:h-[4292pxpx] px-4 md:py-12 py-14  mx-auto">
+    <div className="bg-black text-white h-[373px] md:h-[451px] items-center  w-full flex justify-center ">
+      <div className="w-[390px] h-[224px] noto-sans-kr md:w-[1282px] md:h-[4292pxpx] ">
         {/* Company Name */}
         <div>
         <h2 className="text-[14px] md:text-[24px] noto-sans-kr-bold mb-4">모드니펫 MODNEYPET</h2>
