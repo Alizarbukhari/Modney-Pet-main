@@ -84,7 +84,7 @@ function  Login({ setIsValid }) {
             <div className="relative">
             <input
   placeholder="아이디를 입력하세요"
-  className="user-input h-12 text-lg bg-transparent border-b-2 border-t-0 border-x-0 rounded-none focus-visible:ring-0 focus-visible:border-primary"
+  className="user-input pr-10 h-12 text-lg bg-transparent focus:bg-transparent border-b-2  rounded-none "
   id="아이디"
   type="text"
   onChange={(e) => {
@@ -92,7 +92,7 @@ function  Login({ setIsValid }) {
   }}
 />
               {user_info.user_id ? (
-                <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-700 transition-opacity duration-500 opacity-100 bg-white rounded-full" />
+                <Check className="absolute right-3 top-1/2  -translate-y-1/2 w-5 h-5 text-gray-700 transition-opacity duration-500 opacity-100 bg-white rounded-full" />
               ) : (
                 <Circle className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white transition-opacity duration-500 opacity-100" />
               )}
