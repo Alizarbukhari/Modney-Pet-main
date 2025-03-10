@@ -25,18 +25,18 @@ export default function Footer2() {
 
           </p>
           <p className="md:flex  md:items-start   ">
-            <p1 className="md:hidden space-x-1">
+            <p className="md:hidden space-x-1">
             <span className="items-start md:hidden ">이메일 manduuu_@naver.com</span>
             <span className="inline md:hidden">|</span>
             <span> 통신판매번호 2022-경기부천-2782 <a href="https://modneypet.com/index.html#none" className="underline">[사업자정보확인]</a> </span>
 
-            </p1>
+            </p>
            
 
-             <p1 className="space-x-3 hidden md:block"><span> 통신판매번호 2022-경기부천-2782 <a href="https://modneypet.com/index.html#none" className="underline">[사업자정보확인]</a> </span>
+             <p className="space-x-3 hidden md:block"><span> 통신판매번호 2022-경기부천-2782 <a href="https://modneypet.com/index.html#none" className="underline">[사업자정보확인]</a> </span>
             <span className="hidden md:inline ">|</span>
             <span className=""> 14786 경기도 부천시 양지로 237 (옥길동) 광장프런티어벤처5차지식산업센터 930호</span>
-</p1>
+</p>
           
           </p>
           <p className = "md:hidden "><span className="top-3"> 14786 경기도 부천시 양지로 237 (옥길동) 광장프런티어벤처5차지식산업센터 930호</span>

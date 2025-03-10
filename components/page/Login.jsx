@@ -66,7 +66,7 @@ function  Login({ setIsValid }) {
   return (
     
     <>
-<div className="md:h-[100vh] h-[80vh] w-[100%] bg-cover bg-center bg-[url('/bg-login.jpg')] relative flex justify-center items-center">
+<div className="md:h-[100vh] h-[76vh] w-[100%] bg-cover bg-center bg-[url('/bg-login.jpg')] relative flex justify-center items-center">
   <div className='top-[100px] left-0 right-0 flex justify-center items-center flex-col '>
           <div className="flex w-[257.9999694824219px]  md:w-[414.9999694824219px] h-[107.99999237060547px] md:h-[197.99998474121094px] items-center justify-center ">
           <h1 className="built-titling-font text-[58px] md:text-[90px] text-center text-white m-0 leading-none mb-[100px]">
@@ -82,15 +82,15 @@ function  Login({ setIsValid }) {
               아이디 
             </label>
             <div className="relative">
-              <Input
-                placeholder="아이디를 입력하세요"
-                className="user-input  h-12 text-lg bg-transparent border-b-2 border-t-0 border-x-0 rounded-none focus-visible:ring-0 focus-visible:border-primary"
-                id="아이디"
-                type="text"
-                onChange={(e) => {
-                  setUserInfo({ ...user_info, user_id: e.target.value });
-                }}
-              />
+            <input
+  placeholder="아이디를 입력하세요"
+  className="user-input h-12 text-lg bg-transparent border-b-2 border-t-0 border-x-0 rounded-none focus-visible:ring-0 focus-visible:border-primary"
+  id="아이디"
+  type="text"
+  onChange={(e) => {
+    setUserInfo({ ...user_info, user_id: e.target.value });
+  }}
+/>
               {user_info.user_id ? (
                 <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-700 transition-opacity duration-500 opacity-100 bg-white rounded-full" />
               ) : (
@@ -106,7 +106,7 @@ function  Login({ setIsValid }) {
             <div className="relative">
               <Input
                 placeholder="비밀번호를 입력하세요"
-                className="user-input pr-10 h-12 text-lg bg-transparent border-b-2 border-t-0 border-x-0 rounded-none focus-visible:ring-0 focus-visible:border-primary"
+                className="user-input pr-10 h-12 text-lg bg-transparent focus:bg-transparent border-b-2 border-t-0 border-x-0 rounded-none focus-visible:ring-0 focus-visible:border-primary"
                 id="패스워드"
                 type="password"
                 onChange={(e) => {
@@ -122,7 +122,7 @@ function  Login({ setIsValid }) {
           </div>
 <div className="flex flex-col gap-3">
           <Button
-            className="bg-white text-black rounded-xl  text-[15px] font-medium text-center py-6 px-4 flex flex-col hover:text-white  w-[268px] "
+            className="bg-white text-black rounded-xl   text-[15px] font-medium text-center py-6 px-4 flex flex-col hover:text-white  w-[268px] "
             onClick={handleLogin}
           >
             Login

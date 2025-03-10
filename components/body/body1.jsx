@@ -24,16 +24,16 @@ export default function Body1() {
             </div>
             {/* paragraph */}
           <div className='flex flex-col px-2  leading-[2rem] text-center mt-8'>
-             <p className='md:text-[18px] text-[13px] noto-sans-kr  '>
+             <p className='md:text-[18px]   text-[13px] noto-sans-kr  '>
              <span className='noto-sans-kr-bold  '>
              하우스백</span>을 선택해 주시고, 소중한 반려동물에게 <br className='md:hidden' /> <span className='noto-sans-kr-bold '>특별한 보금자리 </span>를 마련해 주셔서 진심으로 감사드립니다. <br />
              </p>
-             <p className='  md:text-[16.5px] text-[13px] mt-2 md:mt-0'><span className='noto-sans-kr-bold '>하우스백 </span>은 단순한 가방이 아닌,<span className='noto-sans-kr-bold'> 반려동물과 함께하는 삶을 더욱 편안하고 가치 있게 만들어 줄 공간 </span>입니다.</p>
+             <p className='  md:text-[17.5px] text-[13px]  mt-2 md:mt-0'><span className='noto-sans-kr-bold '>하우스백 </span>은 단순한 가방이 아닌,<span className='noto-sans-kr-bold'> 반려동물과 함께하는 삶을 더욱 편안하고 가치 있게 만들어 줄 공간 </span>입니다.</p>
              <p className='md:text-[18px] text-[13px] noto-sans-kr mt-2  md:mt-0'>
              저희 모드니펫은 반려동물이 <span className='noto-sans-kr-bold'> 더 행복하고 의미 있는 시간 </span>이 될 수 있도록 늘 함께하겠습니다.
              </p>
-             <p className='md:text-[18px] text-[13px] noto-sans-kr md:mt-0'>다시 한번 축하와 감 사의 마음을 전하며,<br className='md:hidden' /> 앞으로도 많은 사랑과 관심 부탁드립니다.</p>
-             <p className=''>감사합니다.</p>
+             <p className='md:text-[18px] text-[13px] md:mb-7 noto-sans-kr md:mt-0'>다시 한번 축하와 감 사의 마음을 전하며,<br className='md:hidden' /> 앞으로도 많은 사랑과 관심 부탁드립니다.</p>
+             <p className='md:mb-7'>감사합니다.</p>
              <p className=" noto-sans-kr-bold">모드니펫 드림</p>
           </div>
           </div>

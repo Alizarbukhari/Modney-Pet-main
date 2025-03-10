@@ -136,11 +136,11 @@ export default function Dogshome() {
           </div>
 
           {/* Mobile View Carousel */}
-          <div className="md:hidden grid grid-cols-2 gap-4"
+          <div className="md:hidden grid grid-cols-2 gap-2 "
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}>
             {petsData.slice(0, visibleCount).map((pet, index) => (
-              <div key={index} className="h-[169px] w-[169.59px]">
+            <div key={index} >  <div className="h-[169px] w-[169.59px]">
                 <Image
                   src={`/product_image/${pet.imageName}`}
                   alt={pet.dog_name}
@@ -148,8 +148,13 @@ export default function Dogshome() {
                   height={169.59}
                   className="rounded-lg w-full h-full"
                 />
-              </div>
-            ))}
+               
+              </div> <div className="flex text-center justify-center text-[16px] noto-sans-kr-bold">
+                    {`${pet.dog_name} /(${getAge(pet.dog_date_of_birth)})살`}
+                  </div>
+              
+              </div>))}
+            
           </div>
 
           {/* Load More Button */}
