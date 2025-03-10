@@ -8,12 +8,12 @@ export default function Footer2() {
       <div className="w-[390px] h-[224px] noto-sans-kr md:w-[1282px] md:h-[4292pxpx] mx-7 md:mx-36 ">
         {/* Company Name */}
         <div>
-        <h2 className="text-[14px] md:text-[24px] noto-sans-kr-bold mb-4">모드니펫 MODNEYPET</h2>
+        <div className="text-[14px] md:text-[24px] noto-sans-kr-bold mb-4">모드니펫 MODNEYPET</div>
         </div>
         
         {/* Contact Info */}
         <div className="space-y-2  text-[9px] md:text-[15px] items-start  text-gray-300 mb-1">
-          <h1 className="md:flex space-x-[15px] md:space-x-2 items-start  ">
+          <div className="md:flex space-x-[15px] md:space-x-2 items-start  ">
             <span>대표 이다영</span>
             <span className="inline">|</span>
             <span>사업자번호 343-13-00886</span>
@@ -23,24 +23,24 @@ export default function Footer2() {
             <span className="items-start hidden md:block">이메일 manduuu_@naver.com</span>
             
 
-          </h1>
-          <h1 className="md:flex  md:items-start   ">
-            <h1 className="md:hidden space-x-1">
+          </div>
+          <div className="md:flex  md:items-start   ">
+            <div className="md:hidden space-x-1">
             <span className="items-start md:hidden ">이메일 manduuu_@naver.com</span>
             <span className="inline md:hidden">|</span>
             <span> 통신판매번호 2022-경기부천-2782 <a href="https://modneypet.com/index.html#none" className="underline">[사업자정보확인]</a> </span>
 
-            </h1>
+            </div>
            
 
-             <h1 className="space-x-3 hidden md:block"><span> 통신판매번호 2022-경기부천-2782 <a href="https://modneypet.com/index.html#none" className="underline">[사업자정보확인]</a> </span>
+             <div className="space-x-3 hidden md:block"><span> 통신판매번호 2022-경기부천-2782 <a href="https://modneypet.com/index.html#none" className="underline">[사업자정보확인]</a> </span>
             <span className="hidden md:inline ">|</span>
             <span className=""> 14786 경기도 부천시 양지로 237 (옥길동) 광장프런티어벤처5차지식산업센터 930호</span>
-</h1>
+</div>
           
-          </h1>
-          <h1 className = "md:hidden "><span className="top-3"> 14786 경기도 부천시 양지로 237 (옥길동) 광장프런티어벤처5차지식산업센터 930호</span>
-          </h1>
+          </div>
+          <div className = "md:hidden "><span className="top-3"> 14786 경기도 부천시 양지로 237 (옥길동) 광장프런티어벤처5차지식산업센터 930호</span>
+          </div>
          
        
         </div>

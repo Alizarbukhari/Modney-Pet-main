@@ -26,11 +26,11 @@ export default function Body2_Content(props) {
   };
 
   return (
-    <div className="w-full md:px-[px] py-6 border-[#DDDDDD] border-b bg-[#FFFCF3]">
+    <div className="w-full py-6 border-[#DDDDDD] border-b  bg-[#FFFCF3]">
       {/* Header Section */}
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-2 ">
-          <div className="md:text-[85px] text-[24px] noto-sans-kr-bold">{props.id}</div>
+        <div className="flex items-center gap-5 md:gap-5">
+          <div className="md:text-[85px] text-[24px] noto-sans-kr-bold ">{props.id}</div>
           <p className="md:text-[35px] text-[16px] noto-sans-kr-bold">{props.title}</p>
         </div>
         {/* Icon - Hidden on Mobile, Visible on Desktop */}
@@ -53,7 +53,7 @@ export default function Body2_Content(props) {
         }`}
        
       >
-        <div className=" ">
+        <div className=" px-5">
           <div className="flex flex-col md:flex-row md:gap-4 mx-[20px] md:mx-[54px]">
             <h2 className="md:text-[18px] text-[14px] 0 noto-sans-kr-bold md:mb-4 w-[210px]">{props.T1}</h2>
             <p className="md:text-[18px] text-[#666666] text-[12px] mb-4">
