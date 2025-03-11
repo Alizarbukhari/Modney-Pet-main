@@ -4,16 +4,22 @@ import { cookies } from 'next/headers';
 
 export async function POST(req) {
   const supabase = await createClient();
-  const { product_name,description,price,image_url } = await req.json();
+  const { product_name, description, category } = await req.json();
 
+  // Current date generate karna
   const now = new Date();
-  const new_image_url = now.toISOString() + "_" + image_url;
+  const currentDate = now.toISOString();
 
+  // Ab data postcategory table me insert ho raha hai, image system hata diya gaya hai
   const { data, error } = await supabase
-  .from('product_list')
-  .insert([{product_name:product_name,description:description,price:price,image:new_image_url}])
-  .select()
-        
+    .from('add_product_list')
+    .insert([{ 
+      product_name: product_name, 
+      description: description, 
+      category: category, 
+      date: currentDate 
+    }])
+    .select();
 
   if (error) {
     return new Response(JSON.stringify({ message: '서버 접속 실패', error: error.message }), {
@@ -23,17 +29,12 @@ export async function POST(req) {
   }
 
   if (data.length === 0) {
-    return new Response(JSON.stringify({ message: '서버 접속 실패', data : "failed "}), {
+    return new Response(JSON.stringify({ message: '서버 접속 실패', data: "failed" }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
-  }
-
-  // 토큰 생성 로그인시
-  
-
-  else {
-    return new Response(JSON.stringify({ message: '서버 접속 성공', data : "success",image_url:new_image_url}), {
+  } else {
+    return new Response(JSON.stringify({ message: '서버 접속 성공', data: "success" }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
