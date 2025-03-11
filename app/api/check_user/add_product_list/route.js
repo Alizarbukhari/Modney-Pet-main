@@ -3,38 +3,55 @@ import jwt from 'jsonwebtoken';
 import { cookies } from 'next/headers';
 
 export async function POST(req) {
-  const supabase = await createClient();
-  const { product_name,description,price,image_url } = await req.json();
+  try {
+    const supabase = await createClient();
+    const { product_name, description, category } = await req.json();
 
-  const now = new Date();
-  const new_image_url = now.toISOString() + "_" + image_url;
+    console.log("Received data:", { product_name, description, category });
 
-  const { data, error } = await supabase
-  .from('product_list')
-  .insert([{product_name:product_name,description:description,price:price,image:new_image_url}])
-  .select()
-        
+    // Current date generate karna
+    const now = new Date();
+    const currentDate = now.toISOString();
+    console.log("Current date generated:", currentDate);
 
-  if (error) {
-    return new Response(JSON.stringify({ message: '서버 접속 실패', error: error.message }), {
-      status: 401,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }
+    // Ab data postcategory table me insert ho raha hai, image system hata diya gaya hai
+    const { data, error } = await supabase
+      .from('add_product_list')
+      .insert([{
+        product_name: product_name,
+        description: description,
+        category: category,
+        currentDate: currentDate // Or the correct column name like 'created_at'
+      }])
+      .select();
 
-  if (data.length === 0) {
-    return new Response(JSON.stringify({ message: '서버 접속 실패', data : "failed "}), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }
+    if (error) {
+      console.error("Supabase error:", error.message); // Log the error from Supabase
+      return new Response(JSON.stringify({ message: '서버 접속 실패', error: error.message }), {
+        status: 401,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
 
-  // 토큰 생성 로그인시
-  
+    console.log("Data returned after insert:", data);
 
-  else {
-    return new Response(JSON.stringify({ message: '서버 접속 성공', data : "success",image_url:new_image_url}), {
-      status: 200,
+    if (data.length === 0) {
+      console.log("No data returned after insertion.");
+      return new Response(JSON.stringify({ message: '서버 접속 실패', data: "failed" }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    } else {
+      console.log("Data inserted successfully:", data);
+      return new Response(JSON.stringify({ message: '서버 접속 성공', data: "success" }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+  } catch (error) {
+    console.error("Unexpected error occurred:", error.message);
+    return new Response(JSON.stringify({ message: 'Unexpected server error', error: error.message }), {
+      status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
   }
