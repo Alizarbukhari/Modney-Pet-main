@@ -3,22 +3,6 @@ import * as React from "react"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-} from "@/components/ui/table"
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select"
-import { ScrollArea } from "@/components/ui/scroll-area"
 import AdminSidebar from "@/components/custom/adminSidebar"
 import AdminHeader from "@/components/custom/adminHeader"
 import { useRouter } from "next/navigation"
@@ -38,24 +22,7 @@ export default function AdminProduct() {
     })
     const router = useRouter();
 
-    const handleFileUpload = async () => {
-        if (!imageFile) return;
-        const formData = new FormData();
-        if (imageFile) {
-            formData.append('file', imageFile);
-            formData.append('image_name', image_name);
-            const res = await fetch('/api/upload_image', {
-                method: 'POST',
-                body: formData
-            });
-
-            if (res.ok) {
-                alert('File uploaded successfully');
-            } else {
-                alert('File upload failed');
-            }
-        }
-    }
+   
 
     return (
         <div className="flex h-screen bg-gray-100">
@@ -102,9 +69,7 @@ export default function AdminProduct() {
                                         });
                                     
                                         if (response.status === 200) {
-                                            setImageName(response.data.image_url);
-                                            console.log("image_name",image_name);
-                                            handleFileUpload();
+                                            
                                         }
                                     } catch (error) {
                                         console.error('Error fetching data:', error);
