@@ -14,7 +14,7 @@ export default function Body3() {
             <div className='md:text-[45px] text-[24px]   noto-sans-kr-bold text-center'>하우스백 사용방법</div>
             <div><p className='md:text-[30px] text-[13px] noto-sans-kr text-center'>하우스백 사용으로 집의 다양한 공간과 기능을 제어하여<br/>
             편리하고 안전한 생활이 가능합니다.</p></div>
-            <div><button className='md:h-[63px] md:w-[283px] md:text-[21px] text-[#333333] noto-sans-kr-bold text-[12px] text-center h-[27px] w-[140px] bg-[#FFC800] border-[2px] border-[#000000]'>하우스백 사용법 PDF</button></div>
+            <div><button className='md:h-[63px] md:w-[283px] md:text-[21px] text-[#333333] noto-sans-kr-bold text-[12px] text-center py-[8px] w-[140px] bg-[#FFC800] border-[2px] border-[#000000]'>하우스백 사용법 PDF</button></div>
         </div>
        
         

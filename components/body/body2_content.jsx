@@ -29,7 +29,7 @@ export default function Body2_Content(props) {
     <div className="w-full py-6 border-[#DDDDDD] border-b  bg-[#FFFCF3]">
       {/* Header Section */}
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-5 md:gap-5">
+        <div className="flex items-center gap-5 md:gap-5 md:mb-0 mb-[20px]">
           <div className="md:text-[85px] text-[24px] noto-sans-kr-bold ">{props.id}</div>
           <p className="md:text-[35px] text-[16px] noto-sans-kr-bold">{props.title}</p>
         </div>

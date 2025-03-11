@@ -17,7 +17,7 @@ function AdminSidebar() {
                         currentPath === '/login/admin/product_list' ? 'text-yellow-600 bg-yellow-100' : 'text-gray-700 hover:bg-gray-100'
                     }`}
                 >
-                    상품 관리
+                    계시글 관리
                 </a>
                 <a
                     href="/login/admin/product"
@@ -28,12 +28,12 @@ function AdminSidebar() {
                     시리얼 관리
                 </a>
                 <a
-                    href="#"
+                    href="/login/admin/product_list_real"
                     className={`block py-2 px-4 text-sm ${
-                        currentPath === '/some-other-path' ? 'text-yellow-600 bg-yellow-100' : 'text-gray-700 hover:bg-gray-100'
+                        currentPath === '/login/admin/product_list_real' ? 'text-yellow-600 bg-yellow-100' : 'text-gray-700 hover:bg-gray-100'
                     }`}
                 >
-                    배너관리
+                    상품 관리
                 </a>
             </nav>
         </div>

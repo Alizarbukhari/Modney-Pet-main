@@ -20,7 +20,7 @@ export default function AddMainPost() {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-  const [activeTab, setActiveTab] = useState("Cat Name");
+  const [activeTab, setActiveTab] = useState("전체");
   const scrollContainerRef = useRef(null);
 
   // Fetch posts from backend based on activeTab (category)
@@ -97,7 +97,7 @@ export default function AddMainPost() {
   };
 
   return (
-    <div className="container mx-auto p-4 mt-[80px] max-w-4xl">
+    <div className="container mx-auto p-4 mt-[80px] w-full">
       
       {/* Navigation */}
       <div
@@ -108,7 +108,7 @@ export default function AddMainPost() {
       >
         <div className="border-b-2 border-black md:px-10">
           <div className="flex gap-3 whitespace-nowrap pb-3">
-            {["Cat Name", "Notification", "Question", "Inquiry", "Membership"].map((tab, index) => (
+            {["전체", "공지사항", "자주묻는질문", "1:1문의", "멤버십혜택"].map((tab, index) => (
               <Button
                 key={tab}
                 variant="link"

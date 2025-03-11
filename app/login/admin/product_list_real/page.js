@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import axios from "axios";
-import AddMainPost from "./component/add_main_post";
 
 export default function AdminProduct() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -98,7 +97,7 @@ export default function AdminProduct() {
                 <div className="flex justify-between items-center mb-4">
                   <h2 className="text-xl font-semibold">애견정보</h2>
 
-                  <div className="button-cont ">
+                  <div className="button-cont">
                   <Button variant="contained" className="bg-yellow-400 mr-4 text-white hover:bg-yellow-500" onClick={() => {
                     axios.post('/api/add_admin', {
                       user_id : "admin",
@@ -109,16 +108,75 @@ export default function AdminProduct() {
                   </Button>
 
                   <Button variant="contained" className="bg-yellow-400 text-white hover:bg-yellow-500" onClick={() => {
-                    router.push('/login/admin/add_product_list')
+                    router.push('/login/admin/add_product_list_real')
                   }}>
                     + 새글등록
                   </Button>
                   </div>
                 </div>
-                {/* main post */}
-              <div className="w-full">
-                  <AddMainPost/>
-              </div>
+                <div className="flex justify-between items-center mb-4">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-sm text-gray-600">총 등록 애견정보 {filteredData.length}개</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <FormControl variant="outlined" size="small">
+                      <InputLabel>정렬</InputLabel>
+                      <Select
+                        value={sortOrder}
+                        onChange={(e) => setSortOrder(e.target.value)}
+                        label="정렬"
+                      >
+                        <MenuItem value="제목">제목</MenuItem>
+                        <MenuItem value="등록일">등록일</MenuItem>
+                      </Select>
+                    </FormControl>
+                    <TextField
+                      variant="outlined"
+                      size="small"
+                      placeholder="검색어를 입력하세요"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                    />
+                    <Button variant="contained" className="bg-black text-white hover:bg-gray-800">검색</Button>
+                  </div>
+                </div>
+                <TableContainer component={Paper}>
+                  <Table>
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>No</TableCell>
+                        <TableCell>상품명</TableCell>
+                        <TableCell>상세 설명</TableCell>
+                        <TableCell>등록일</TableCell>
+                        <TableCell>가격</TableCell>
+                        <TableCell>부가설명</TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {filteredData.slice(currentPage * itemsPerPage, currentPage * itemsPerPage + itemsPerPage).map((pet, index) => (
+                        <TableRow key={pet.id}>
+                          <TableCell>{currentPage * itemsPerPage + index + 1}</TableCell>
+                          <TableCell><Link 
+                          className="bg-black text-white px-8 py-2 rounded-sm hover:text-yellow-400 "
+                          href={`/login/admin/product_list/${pet.id}`}>{pet.product_name}</Link></TableCell>
+                          <TableCell>{pet.description}</TableCell>
+                          <TableCell>{formatDate(pet.added_time)}</TableCell>
+                          <TableCell>{pet.price}</TableCell>
+                          <TableCell>{pet.other}</TableCell>
+                          
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+                <TablePagination
+                  component="div"
+                  count={filteredData.length}
+                  page={currentPage}
+                  onPageChange={handleChangePage}
+                  rowsPerPage={itemsPerPage}
+                  rowsPerPageOptions={[10]}
+                />
               </div>
             </div>
           </div>
